@@ -69,6 +69,31 @@ A full-stack to-do application built with Go (Gin) for the backend, React for th
     docker-compose up --build
     ```
 
+### Setup (Locally)
+To run the application without Docker:
+
+1. **Run MongoDB locally** on port `27017`. You can do this by using MongoDB’s official docker image or running it directly on your system.
+
+2. **Modify the backend's `.env` file**:
+    - Change the `MONGO_URI` to connect to the locally running MongoDB:
+    ```plaintext
+    MONGO_URI=mongodb://localhost:27017
+    ```
+
+3. **Run the backend**:
+    - In the `backend` directory, run:
+    ```bash
+    go run main.go
+    ```
+
+4. **Run the frontend**:
+    - In the `frontend` directory, run:
+    ```bash
+    npm start
+    ```
+
+    This will start the frontend on [http://localhost:3000](http://localhost:3000), and the backend will be available at [http://localhost:8080](http://localhost:8080).
+
 ## 🔧 Environment Variables
 
 - **REACT_APP_API_URL**: Backend API URL (used by frontend). Adjust if you want to run locally.
