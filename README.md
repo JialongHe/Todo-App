@@ -35,6 +35,7 @@ A full-stack to-do application built with Go (Gin) for the backend, React for th
 │   ├── README.md
 │   └── src
 └── README.md
+```
 
 ## ⚙️ Installation and Setup
 
